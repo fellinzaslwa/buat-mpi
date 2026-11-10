@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Mpi ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <audio id="bgMusic" loop>
+    <source src="Iris.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicButton" onclick="toggleMusic()">
+    ♫ Play Music
+  </button>
+
+  <div class="hearts" id="hearts"></div>
+
+  <!-- PAGE 1: OPENING -->
+  <section class="page active" id="page1">
+    <div class="content">
+      <span class="small-text">A LITTLE SURPRISE FOR YOU ♡</span>
+      <div class="flower">🌷</div>
+
+      <h1>𝑯𝒂𝒑𝒑𝒚 𝒃𝒊𝒓𝒕𝒉𝒅𝒂𝒚<br><i>Bebe Mpi</i></h1>
+
+      <p class="subtitle">
+        Today is all about you.<br>
+        I made something special just for you.
+      </p>
+
+      <p class="bottom-text">
+        made by the most beautiful women (∩˃o˂∩)♡
+      </p>
+    </div>
+  </section>
+
+  <!-- PAGE 2: BIRTHDAY WISH -->
+  <section class="page" id="page2">
+    <div class="content">
+      <span class="small-text">A SPECIAL DAY FOR SOMEONE SPECIAL</span>
+      <div class="flower">🎂</div>
+
+      <h1>𝑯𝒂𝒑𝒑𝒚 𝒃𝒊𝒓𝒕𝒉𝒅𝒂𝒚<br><i>Bebe𐙚˚࿔ </i></h1>
+
+      <p class="message">
+        Another Year, another reason to celebrate you.
+        <br><br>
+        Hari ini tentang kamu, tentang semua hal baik yang sudah kamu lewati,
+        dan tentang perjalanan baru yang akan kamu mulai.
+        <br>
+        Aku harap di umur kamu yang sekarang dan kedepannya akan membawa lebih banyak kebahagiaan, kesempatan,
+        dan hal-hal yang selama ini kamu usahakan.
+        <br><br>
+        Semoga semua hal baik selalu datang ke hidup kamu.
+        Semoga kamu selalu sehat, bahagia, dan semua
+        impian kamu satu per satu bisa terwujud, Aamiin
+      </p>
+    </div>
+  </section>
+
+  <!-- PAGE 3: MEMORIES -->
+  <section class="page" id="page3">
+    <div class="content wide">
+      <span class="small-text">LITTLE MOMENTS, BIG MEMORIES</span>
+
+      <h1>Your Childhood <i>Memories</i></h1>
+
+      <div class="gallery">
+        <div class="photo-card">
+          <img src="images/foto1.jpg" alt="Our memory 1">
+          <p>♡</p>
+        </div>
+
+        <div class="photo-card">
+          <img src="images/foto2.jpg" alt="Our memory 2">
+          <p>&gt;ᴗ&lt;</p>
+        </div>
+
+        <div class="photo-card">
+          <img src="images/foto3.jpg" alt="Our memory 3">
+          <p>૮₍ ˃ ⤙ ˂ ₎ა</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4: LOVE LETTER -->
+  <section class="page" id="page4">
+    <div class="content">
+      <span class="small-text">WORDS FROM MY HEART</span>
+      <div class="envelope">💌</div>
+
+      <h1>A Letter <i>For You</i></h1>
+
+      <div class="letter" id="letter">
+        <p>
+          Your Smile, your eyes, your laugh, your voice,
+          your present just everything about you i love you,
+          In my eyes you are totally perfect.
+        </p>
+
+        <p>
+          you are my world, my life, you means lot me.
+          I will never let you go because, i know my life won't be completed,
+          If you are not in it you are my one and only.
+        </p>
+
+        <p>
+          Thank You for being an amazing person who's, You always manage to make me happy,
+          even when iam upset and you've never failed to cheer me up.
+          <br>
+          HAPPY BIRTHDAY MPI !!
+        </p>
+
+        <p class="signature">With all my love  ♡</p>
+      </div>
+
+      <button class="main-btn" onclick="openInvitationPopup()">
+        Open Invitation ♡
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 5: FINAL -->
+  <section class="page" id="page5">
+    <div class="content">
+      <span class="small-text">AND ONE LAST THING...</span>
+      <div class="flower">🎀</div>
+
+      <h1>You Are My<br><i>Favorite Person</i></h1>
+
+      <p class="message">
+        Dari sekian banyak hal indah di dunia,
+        salah satu yang paling aku syukuri adalah
+        bisa mengenal dan memiliki kamu.
+        <br><br>
+        Selamat Ulang Tahun, Bebe Mpi !!.
+        <br>
+        Please stay happy, stay healthy,
+        and never forget how loved you are.
+        <br><br>
+        I love you, today, tomorrow,
+        and all the days after. ♡
+      </p>
+
+      <div class="final-heart">♡</div>
+      <p class="bottom-text">Forever your biggest fan.</p>
+
+      <button class="main-btn" onclick="openMemoriesPopup()">
+        Our Memories ૮ ˙Ⱉ˙ ა
+      </button>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <div class="page-nav">
+    <button id="prevBtn" onclick="goBack()">← Back</button>
+    <span id="pageIndicator">01 / 05</span>
+    <button id="nextBtn" onclick="goNext()">Next →</button>
+  </div>
+
+  <!-- INVITATION POPUP -->
+  <div id="invitationPopup" class="popup" onclick="closeOutside(event)">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closeInvitation()">×</button>
+
+      <h2>You're Invited! ♡</h2>
+      <p>Let's celebrate your special day!</p>
+
+      <div class="invitation-slider">
+        <button class="slide-btn" onclick="changeSlide(-1)">‹</button>
+
+        <img id="invitationSlide" src="images/1.png" alt="Invitation page">
+
+        <button class="slide-btn" onclick="changeSlide(1)">›</button>
+      </div>
+
+      <p id="slideIndicator">01 / 02</p>
+    </div>
+  </div>
+
+  <!-- OUR MEMORIES POPUP -->
+  <div id="memoriesPopup" class="popup" onclick="closeMemoriesOutside(event)">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closeMemoriesPopup()">×</button>
+
+      <h2>Our Memories ♡</h2>
+      <p>Every moment with you is special.</p>
+
+      <div class="invitation-slider">
+        <button class="slide-btn" onclick="changeMemory(-1)">‹</button>
+
+        <img id="memorySlide" src="images/couple1.jpg" alt="Our memories">
+
+        <button class="slide-btn" onclick="changeMemory(1)">›</button>
+      </div>
+
+      <p id="memoryIndicator">01 / 04</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
